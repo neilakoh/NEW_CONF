@@ -34,7 +34,7 @@ class FormInputs extends React.Component {
           ))
         }
         <View style={{width: formWrapperSize.width * .95, height: formWrapperSize.height * .10, marginTop: 5}}>
-          <ContactInfo />
+          <ContactInfo onSelected={(selected)=>console.log(selected)}/>
         </View>
       </View>
     );

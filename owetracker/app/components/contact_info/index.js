@@ -33,6 +33,7 @@ class ContactInfo extends React.Component {
   }
   render() {
     const { contactInfoWrapperSize, contactInfo, openPicker, pickerOptions } = this.state;
+    const { onSelected } = this.props;
 
     return (
       <View style={styles.contact_info_wrapper} onLayout={(e)=>{
@@ -104,7 +105,10 @@ class ContactInfo extends React.Component {
               borderRadius: 360,
               justifyContent: 'center',
               alignItems: 'center'
-            }} onPress={() => this.setState({openPicker: false})}>
+            }} onPress={() => {
+              onSelected(contactInfo.label);
+              this.setState({openPicker: false});
+            }}>
               <View>
                 <Text style={{fontWeight: 'bold'}}>CLOSE</Text>
               </View>
@@ -147,7 +151,8 @@ const styles = StyleSheet.create({
 });
 
 ContactInfo.propTypes = {
-  styles: PropTypes.object
+  styles: PropTypes.object,
+  onSelected: PropTypes.func
 };
 
 export default ContactInfo;
