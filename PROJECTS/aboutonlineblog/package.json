@@ -1,0 +1,20 @@
+{
+  "name": "aboutonlineblog",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "jquery": "^3.3.1",
+    "meteor-node-stubs": "~0.2.4",
+    "popper.js": "^1.14.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.3.0",
+    "redux-thunk": "^2.2.0"
+  }
+}

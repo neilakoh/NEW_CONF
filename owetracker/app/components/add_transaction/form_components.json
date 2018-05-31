@@ -1,0 +1,50 @@
+[
+  {
+    "id": "transaction_name",
+    "name": "Transaction Name",
+    "placeholder": "Enter transaction name",
+    "maxLength": 30,
+    "refName": "transactionName",
+    "type": "default"
+  },
+  {
+    "id": "creditor_debtor_name",
+    "name": "Creditor Debtor Name",
+    "placeholder": "Enter creditor or debtor's name",
+    "maxLength": 15,
+    "refName": "creditorDebtorName",
+    "type": "default"
+  },
+  {
+    "id": "transaction_description",
+    "name": "Transaction Description",
+    "placeholder": "Enter transaction description...",
+    "maxLength": 120,
+    "refName": "transactionDescription",
+    "type": "default"
+  },
+  {
+    "id": "borrowed_amount",
+    "name": "Borrowed Amount",
+    "placeholder": "Enter borrowed amount",
+    "maxLength": 6,
+    "refName": "borrowedAmount",
+    "type": "numeric"
+  },
+  {
+    "id": "contact_information",
+    "name": "Contact Information",
+    "placeholder": "Enter contact information",
+    "maxLength": 0,
+    "refName": "contactInformation",
+    "type": "contact"
+  },
+  {
+    "id": "due_date",
+    "name": "Due Date",
+    "placeholder": "Set due date",
+    "maxLength": 0,
+    "refName": "dueDate",
+    "type": "duedate"
+  }
+];
