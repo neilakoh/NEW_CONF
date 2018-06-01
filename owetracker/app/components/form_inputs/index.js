@@ -7,6 +7,7 @@ import {
   TextInput
 } from 'react-native';
 import ContactInfo from '../contact_info/index';
+import PaymentScheduler from '../paymentScheduler';
 
 const acceptableTypes = ['default', 'numeric', 'email-address', 'phone-pad'];
 
@@ -35,6 +36,9 @@ class FormInputs extends React.Component {
         }
         <View style={{width: formWrapperSize.width * .95, height: formWrapperSize.height * .10, marginTop: 5}}>
           <ContactInfo onSelected={(selected)=>console.log(selected)}/>
+        </View>
+        <View style={{width: formWrapperSize.width * .95, height: formWrapperSize.height * .10, marginTop: 5}}>
+          <PaymentScheduler />
         </View>
       </View>
     );
