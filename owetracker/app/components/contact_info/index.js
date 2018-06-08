@@ -55,6 +55,11 @@ class ContactInfo extends React.Component {
                 placeholder='Enter contact info'
                 keyboardType={contactInfo.keyType}
                 style={{flex: 1}}
+                onChangeText={(text) => {
+                  this.state.contactInfo.value = text;
+                  this.setState({contactInfo: this.state.contactInfo});
+                  onSelected(this.state.contactInfo);
+                }}
               />
             </View>
           </View>

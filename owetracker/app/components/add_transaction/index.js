@@ -47,6 +47,7 @@ class AddTransaction extends React.Component {
               Object.keys(formWrapperSize).length > 0 ?
               (
                 <FormInput
+                  ref={(inFrm) => { this.InputForm = inFrm; }}
                   inputs={FormComponentData}
                   formWrapperSize={formWrapperSize}
                 />
@@ -67,13 +68,13 @@ class AddTransaction extends React.Component {
                 name: "cancel",
                 title: "Cancel",
                 backgroundColor: "#05487f",
-                action: onClose
+                action: ()=>{onClose()}
               },
               {
                 name: "save",
                 title: "Save",
                 backgroundColor: "#05487f",
-                action: onSave
+                action: ()=>{onSave(this.InputForm.state)}
               }
             ]
           }

@@ -40,11 +40,11 @@
     "type": "contact"
   },
   {
-    "id": "due_date",
-    "name": "Due Date",
-    "placeholder": "Set due date",
+    "id": "payment_schedule",
+    "name": "Payment Schedule",
+    "placeholder": "Set payment schedule",
     "maxLength": 0,
-    "refName": "dueDate",
-    "type": "duedate"
+    "refName": "paymentSchedule",
+    "type": "paymentschedule"
   }
 ];

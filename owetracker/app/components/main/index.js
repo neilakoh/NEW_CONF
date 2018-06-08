@@ -131,7 +131,7 @@ class Splash extends React.Component {
           open={open_add_transaction}
           mobileScreenSize={mobileScreenSize}
           onClose={()=>{this.setState({open_add_transaction: false})}}
-          onSave={()=>{alert('save')}}
+          onSave={(res)=>{console.log(res)}}
         />
       </View>
     );

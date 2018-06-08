@@ -12,6 +12,18 @@ import PaymentScheduler from '../paymentScheduler';
 const acceptableTypes = ['default', 'numeric', 'email-address', 'phone-pad'];
 
 class FormInputs extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      transactionName: '',
+      creditorDebtorName: '',
+      transactionDescription: '',
+      borrowedAmount: 0,
+      contactInformation: {},
+      paymentSchedule: {}
+    }
+  }
   render() {
     const { inputs, formWrapperSize } = this.props;
 
@@ -28,6 +40,10 @@ class FormInputs extends React.Component {
                 placeholder={item.placeholder}
                 underlineColorAndroid='transparent'
                 keyboardType={item.type}
+                onChangeText={(text) => {
+                  this.state[item.refName] = text;
+                  this.setState(this.state);
+                }}
               />
             )
             :
@@ -35,10 +51,10 @@ class FormInputs extends React.Component {
           ))
         }
         <View style={{width: formWrapperSize.width * .95, height: formWrapperSize.height * .10, marginTop: 5}}>
-          <ContactInfo onSelected={(selected)=>console.log(selected)}/>
+          <ContactInfo onSelected={(selected)=>this.setState({contactInformation: selected})}/>
         </View>
         <View style={{width: formWrapperSize.width * .95, height: formWrapperSize.height * .10, marginTop: 5}}>
-          <PaymentScheduler />
+          <PaymentScheduler whenDone={(info)=>this.setState({paymentSchedule: info})}/>
         </View>
       </View>
     );
